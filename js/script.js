@@ -10,16 +10,12 @@ per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.*/
 
 const userAge = parseInt( prompt('Dammi la prima età') );
 const userKm = parseInt( prompt('Dammi quanti chilometri devi percorrere') );
-    console.log (userAge);
-    console.log (userKm);
 
 // calcolo prezzo biglietto
 
 let price = ( userKm * 0.21 );
 let priceFix = price.toFixed(2);
-    console.log (price);
-
-
+    
 // messaggio utente
 
 let userMessage = 'Il prezzo del tuo biglietto è di Euro ' + priceFix;
@@ -27,10 +23,8 @@ let userMessage = 'Il prezzo del tuo biglietto è di Euro ' + priceFix;
 // se minorenne applicare il 20% di sconto
 if ( userAge < 18 ) {
     let discount = price * 20 /100;
-    console.log (discount)
     let finalPrice = price - discount;
     let finalPriceFix = finalPrice.toFixed(2);
-    console.log (finalPrice)
     userMessage = 'Il prezzo del tuo biglietto è di Euro ' + finalPriceFix;
 } 
 
@@ -38,10 +32,8 @@ if ( userAge < 18 ) {
 
 if ( userAge > 65 ) {
     let discount = price * 40 /100;
-    console.log (discount)
     let finalPrice = price - discount;
-    let finalPriceFix = finalPrice.toFixed(2);
-    console.log (finalPrice)
+    let finalPriceFix = finalPrice.toFixed(2);  
     userMessage = 'Il prezzo del tuo biglietto è di Euro ' + finalPriceFix;
 }
 
