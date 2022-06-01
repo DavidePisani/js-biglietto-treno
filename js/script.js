@@ -18,14 +18,14 @@ let priceFix = price.toFixed(2);
     
 // messaggio utente
 
-let userMessage = 'Il prezzo del tuo biglietto è di Euro ' + priceFix;
+let userMessage = 'Il prezzo del suo biglietto è di Euro ' + priceFix;
 
 // se minorenne applicare il 20% di sconto
 if ( userAge < 18 ) {
     let discount = price * 20 /100;
     let finalPrice = price - discount;
     let finalPriceFix = finalPrice.toFixed(2);
-    userMessage = 'Il prezzo del tuo biglietto è di Euro ' + finalPriceFix;
+    userMessage = 'Il prezzo del suo biglietto scontato del 20% è di Euro ' + finalPriceFix;
 } 
 
 // se over 65anni applicare sconto del 40%
@@ -34,7 +34,7 @@ if ( userAge > 65 ) {
     let discount = price * 40 /100;
     let finalPrice = price - discount;
     let finalPriceFix = finalPrice.toFixed(2);  
-    userMessage = 'Il prezzo del tuo biglietto è di Euro ' + finalPriceFix;
+    userMessage = 'Il prezzo del suo biglietto scontato del 40% è di Euro ' + finalPriceFix;
 }
 
 // stampa del prezzo finale in in forma umana (00.00€)
